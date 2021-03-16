@@ -1,0 +1,339 @@
+/*
+div input.vesselinput
+{
+	height: 100%;
+}
+*/
+
+.form-horizontal .control-group
+{
+	margin-bottom: 5px;
+}
+
+.track-dialog .control-group
+{
+	margin-bottom: 5px;
+}
+
+div.track-dialog
+{
+	position:sticky;
+	top: 0;
+	z-index: 10;
+	background-color: rgb(255,255,255);
+}
+
+div.track-dialog form
+{
+	margin: 0;
+}
+
+div.track-table-wrapper
+{
+	display: block;
+}
+
+thead.track-table th
+{
+	position: sticky;
+	top: 150px;
+	background-color: rgb(255,255,255);
+}
+
+div.form-table
+{
+	display: table;
+	padding-bottom: 1em;
+}
+
+div.form-row
+{
+	display: table-row;
+}
+
+div.form-cell
+{
+	display: table-cell;
+	padding-right: 2em;
+	vertical-align: middle;
+	padding-bottom: inherit;
+}
+
+body.oseam-body
+{
+	padding-top: 0px;
+}	
+
+body div.navbar
+{
+	position: fixed;
+	top: 0;
+	z-index: 20;
+}
+
+body div.oseam-container-fluid 
+{
+	padding-top: 60px;
+}
+
+@media(min-height:38em) and (min-width:768px) {
+
+	body div.oseam-container-fluid 
+	{
+		padding-top: 60px;
+		height: 100%;
+		width: 100%;
+		overflow: hidden;
+		position: absolute;
+/*
+		position: fixed;
+*/
+		top: 0;
+		box-sizing: border-box;
+		margin: 0;
+	}
+}
+
+div.modal-body input.input-mini
+{
+	height: 100%;
+}
+
+.navbar .oseam-logo {
+    float      : left;
+    margin     : 4px 4px 0px 0px;
+    padding    : 0px;
+    height     : 32px;
+    width      : 32px;
+    background : url(../images/openseamap-logo-32.png) no-repeat;
+}
+
+.navbar form {
+    margin-top : 2px;
+}
+
+.navbar form input {
+    height : 20px;				/* should be 20 px to view the full text on email and pw input */
+}
+
+.table .progress {
+    margin-bottom : 0px;
+}
+
+.oseam-upload-wrapper {
+    position:relative;
+    overflow:hidden;
+    width:176px;
+    height:30px;
+    cursor:pointer;
+    /*margin-bottom:10px;*/
+}
+
+.oseam-upload-wrapper div {
+    position:absolute;
+    width:150px;
+}
+
+.oseam-upload-wrapper input {
+    position:absolute;
+    cursor:pointer;
+    margin-left:-113px;
+    -moz-opacity:0;
+    filter:alpha(opacity:0);
+    opacity:0;
+}
+
+.oseam-map-tracks {
+    height:600px;
+    border: 1px solid #E3E3E3;
+}
+
+/* revert bootstrap settings */
+.oseam-map-tracks img {
+    max-width: none;
+    vertical-align: none;
+}
+
+.olControlAttribution {
+    font-size: xx-small;
+    right: 3px;
+    bottom: 0.2em;
+    position: absolute;
+    display: block;
+}
+
+/*
+.oseam-modal {
+    / * new custom width * /
+    width: 750px;
+    / * must be half of the width, minus scrollbar on the left (30px) * /
+    margin-left: -375px;
+}
+*/
+
+@media(min-width:768px) {
+	tr div.oseam-modal {
+		/* new custom width */
+		width: 700px;
+		/* must be half of the width, minus scrollbar on the left (30px) */
+		margin-left: -350px;
+	}
+}
+
+.tabs li {
+    list-style:none;
+    display:inline;
+}
+
+.tabs a {
+    padding:5px 10px;
+    display:inline-block;
+    background:#666;
+    color:#fff;
+    text-decoration:none;
+    
+        -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -khtml-border-top-left-radius: 10px;
+    -khtml-border-top-right-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+}
+
+.tabs a.active {
+     
+    background:#eee;
+    color:#000;
+    
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -khtml-border-top-left-radius: 10px;
+    -khtml-border-top-right-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.tabsdiv {
+    
+    width:700px;
+    height: 450px;
+    position: relative;   
+    left: 25px;
+    overflow: auto;
+    
+    background: #eee;
+border: 1px solid #DDD;
+background: -moz-linear-gradient(top, #EEE, #FFF);    
+background: -webkit-linear-gradient(top, #eee, #fff);
+background: -ms-linear-gradient(top, #eee, #fff);
+background: -o-linear-gradient(top, #eee, #fff);
+box-shadow: 1px 2px 4px rgba(0,0,0, .2);
+    
+   /* padding:10px;
+    background:#fff;
+    outline:#00FF00; */
+  
+}
+
+.red {color: red}
+
+.textareabig{
+    width: 700px;
+    heigth: 50px;
+}
+
+.textareasmall{
+    width: 700px;
+    heigth: 25px;
+}
+.metadata-entrees-div{
+     margin-left:15px;
+     margin-top:15px;
+    }
+.trackradios{}    
+
+.meta_lake_river{}
+
+.configId{}
+
+.tableft50 {
+        width: 15em;
+    display: block; 
+    float: left;
+}
+
+.tableft50a {
+        width: 20em;
+    display: block; 
+    float: left;
+}
+
+.tableft60 {
+        width: 12em;
+    display: block; 
+    float: left;
+}
+
+.tableft80 {
+ margin-left: 80px   
+}
+
+.tableft100 {
+ margin-left: 100px   
+}
+
+
+table.separate {  padding: 10px; border-radius: 10px; margin: 10px; margin-left: 30px; border-spacing: 0; border-collapse: separate; }
+
+table.separate td, table.separate th {  padding: 5px 12px; border-bottom: 1px solid black; border-right: 1px solid black; }
+table.separate th { background: #0058CC; color: white; }
+
+table.separate tr:last-child td:first-child {
+    border-bottom-left-radius:10px;
+}
+
+table.separate tr:last-child td:last-child {
+    border-bottom-right-radius:10px;
+}
+
+table.separate tr th:first-child,
+table.separate tr td:first-child {
+   border-left: 1px solid blue;
+}
+
+table.separate tr:first-child th,
+table.separate tr:first-child td {
+   border-top: 1px solid blue;
+}
+
+table.separate tr:first-child th:first-child,
+table.separate tr:first-child td:first-child {
+    border-top-left-radius:10px
+}
+
+table.separate tr:first-child th:last-child,
+table.separate tr:first-child td:last-child {
+    border-top-right-radius:10px
+}
+
+body {
+                padding-top: 60px;
+            }
+
+.helpOsm {
+font-size: 14px; !important
+}
+
+.toc {
+	padding: 9.5px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+    background: #f5f5f5;
+}

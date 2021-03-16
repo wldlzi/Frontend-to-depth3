@@ -1,0 +1,88 @@
+<!--<div class="alert alert-block">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <h4>Warning!</h4>
+    This part is under construction.
+</div>-->
+<legend>
+	<p><img src="images/vessels_low.jpg" alt="Vessels"/></p>
+</legend>
+
+<div class="track-dialog">
+	<form>
+		<div class="form-table">
+			<div class="form-row">
+				<div class="form-cell">
+					<p>Fahrzeug</p>
+				</div>
+				<div class="form-cell">
+					<select id="vesselselection" name="vesselselection" class="vesselId">
+						<option value="" disabled selected>Select your Vessel Config</option>
+					</select>
+				</div>
+				<div class="form-cell">		<!-- RKu: das ist erst einmal nur ein Test -->
+					<div id="nr-of-records"></div>
+					<div id="load-text"> Records werden geladen</div>
+				</div>
+
+			</div>
+			<div class="form-row">
+				<div class="form-cell">
+					<p>Track-Lizenz</p>
+				</div>
+				<div class="form-cell">
+					<select id="licenseselection" name="licenseselection" class="licenseId">
+						<option value="" disabled selected>Select the Track License</option>
+					</select>
+				</div>
+				<div class="form-cell">		<!-- RKu: das ist erst einmal nur ein Test -->
+					<div class="spinner-border" role="status">
+						<strong class="sr-only" id="sr-only">... loading ...</strong>
+					</div>
+<!--					<div class="progress">
+						<div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+					</div> -->
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="form-cell">
+					<div class="oseam-upload-wrapper">
+						<div class="btn btn-info" data-trt="1019:Upload tracks"></div>
+						<input type="file" name="track[]" multiple></input>
+					</div> 
+				</div>
+				<div class="form-cell">Uploads werden st&uuml;ndlich prozessiert. Bei Wartungen kann sich die Auswertung verz&ouml;gern.</div>
+			</div>
+		</div>
+	</form>
+</div>
+
+<div class="track-table-wrapper">
+<table class="table table-condensed table-striped table-hover">
+    <thead class="track-table">
+        <tr>
+            <th column="id">ID</th>
+            <th column="fileName">Dateiname</th>
+            <th column="upload_state">Status</th>
+            <th column="fileType">Dateityp</th>
+            <th column="compression">Kompression</th>
+            <th column="containertrack">Container Track</th>
+            <th column="vesselconfigid">Fahrzeug</th>
+            <th column="licenseid">Lizenz</th>
+            <th column="uploadDate">Upload Datum</th>
+            <th data-trt="1043:Action"></th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+</div>
+
+<!--
+<div>
+	<p>Uploads werden st&uuml;ndlich prozessiert. Bei Wartungen kann sich die Auswertung verz&ouml;gern.</p>
+</div>	
+<div class="oseam-upload-wrapper">
+    <div class="btn btn-info" data-trt="1019:Upload tracks"></div>
+    <input type="file" name="track[]" multiple></input>
+</div>
+-->
