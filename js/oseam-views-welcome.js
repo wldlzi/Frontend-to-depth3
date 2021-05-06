@@ -28,7 +28,8 @@ OSeaM.views.Welcome = OSeaM.View.extend({
         var language = OSeaM.frontend.getLanguage();
         var template = OSeaM.loadTemplate('welcome-' + language);
         var content = $(template({
-			firstname: usermodel.attributes.forename }));
+			firstname: usermodel.attributes.forename,
+			nrDepthUsers: this.getdepth3users() }));
         OSeaM.frontend.translate(content);
         this.$el.html(content);
 //        var elements = document.getElementById("oseam-4");				//RKu: {{idUsernameReadOnly}}
@@ -115,6 +116,32 @@ OSeaM.views.Welcome = OSeaM.View.extend({
 //		document.getElementById("rk-body").removeEventListener("touchmove", function() {that.resetTimer(that);}, false);	// RKu:
 //		document.getElementById("rk-body").removeEventListener("onscroll", function() {that.resetTimer(that);}, false);		// RKu:
 
+	},
+	
+	getdepth3users: function() {
+		var val = "???";
+		var that = this;
+		
+        jQuery.ajax({
+            type: 'GET',
+            url: OSeaM.apiUrl + 'auth/nrofusers',
+
+            success: function(data){
+						console.log('statistic success');
+						var usermodel = OSeaM.frontend.getUser();
+        				var language = OSeaM.frontend.getLanguage();
+        				var template = OSeaM.loadTemplate('welcome-' + language);
+        				var content = $(template({
+							firstname: usermodel.attributes.forename,
+							nrDepthUsers: data }));
+        				OSeaM.frontend.translate(content);
+        				that.$el.html(content);
+						},
+            error: function(data){ 
+						console.log('statistic error');
+						},
+        });
+	return val;
 	}
 });
 
