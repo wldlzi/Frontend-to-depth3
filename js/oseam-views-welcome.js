@@ -19,6 +19,8 @@ OSeaM.views.Welcome = OSeaM.View.extend({
     initialize: function() {
 		var sessionTimerID;												//RKu: TimerID to stop timer later
 		var logoutTimerID;												//RKu: TimerID to stop timer later
+	    var nrUser = '???';
+    	var nrPoints = 'unknown';
 
         OSeaM.frontend.on('change:language', this.render, this);
     },
@@ -29,7 +31,8 @@ OSeaM.views.Welcome = OSeaM.View.extend({
         var template = OSeaM.loadTemplate('welcome-' + language);
         var content = $(template({
 			firstname: usermodel.attributes.forename,
-			nrDepthUsers: this.getdepth3users() }));
+			nrDepthUsers: this.getdepth3users(),
+			nrTrackPoints: this.getTrackPoints() }));
         OSeaM.frontend.translate(content);
         this.$el.html(content);
 //        var elements = document.getElementById("oseam-4");				//RKu: {{idUsernameReadOnly}}
@@ -127,13 +130,43 @@ OSeaM.views.Welcome = OSeaM.View.extend({
             url: OSeaM.apiUrl + 'auth/nrofusers',
 
             success: function(data){
-						console.log('statistic success');
+                        that.nrUser = data
+						console.log('statistic success: User');
 						var usermodel = OSeaM.frontend.getUser();
         				var language = OSeaM.frontend.getLanguage();
         				var template = OSeaM.loadTemplate('welcome-' + language);
         				var content = $(template({
 							firstname: usermodel.attributes.forename,
-							nrDepthUsers: data }));
+							nrDepthUsers: that.nrUser,
+                            nrTrackPoints: that.nrTrack }));
+        				OSeaM.frontend.translate(content);
+        				that.$el.html(content);
+						},
+            error: function(data){ 
+						console.log('statistic error');
+						},
+        });
+	return val;
+	},
+
+	getTrackPoints: function() {
+		var val = "unknown";
+		var that = this;
+		
+        jQuery.ajax({
+            type: 'GET',
+            url: OSeaM.apiUrl + 'auth/nroftrackpoints',
+
+            success: function(data){
+                        that.nrTrack = data
+						console.log('statistic success: TrackPoints');
+						var usermodel = OSeaM.frontend.getUser();
+        				var language = OSeaM.frontend.getLanguage();
+        				var template = OSeaM.loadTemplate('welcome-' + language);
+        				var content = $(template({
+							firstname: usermodel.attributes.forename,
+							nrDepthUsers: that.nrUser,
+                            nrTrackPoints: that.nrTrack }));
         				OSeaM.frontend.translate(content);
         				that.$el.html(content);
 						},
@@ -143,6 +176,7 @@ OSeaM.views.Welcome = OSeaM.View.extend({
         });
 	return val;
 	}
+
 });
 
 //RKu --
