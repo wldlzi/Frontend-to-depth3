@@ -12,7 +12,7 @@
     "1010":"Invalid Email format",
     "1011":"Verification is different.",
     "1012":"At least 8 characters.",
-    "1013":"Invalid captcha.",
+    "1013":"Captcha does not match.",
     "1014":"License",
     "1015":"A agree the <a href=\"#license\" target=\"_blank\">license</a>.",
     "1016":"Your Email address",
